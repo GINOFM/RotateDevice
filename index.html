@@ -91,6 +91,7 @@
                 Swal('Rotate You Device');
                 document.getElementById("overlay").style.display = "block";
             } else {
+                screen.orientation.lock("landscape");
                 document.getElementById("overlay").style.display = "none";
             }
         //}
