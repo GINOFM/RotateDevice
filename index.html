@@ -8,7 +8,8 @@
         <meta name ="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta charset="utf-8"/>
-
+        <script src="html5game/sweetalert2.min.js"></script>
+        <link rel="stylesheet" href="html5game/sweetalert2.min.css">
         <!-- Set the title bar of the page -->
         <title>Created with GameMaker: Studio</title>
 
@@ -84,5 +85,15 @@
         <!-- Run the game code -->
         <script type="text/javascript" src="html5game/RotateDevice.js?XMSYB=1287656077"></script>
         <script>window.onload = GameMaker_Init;</script>
+        <script>
+        function applyOrientation() {
+            if (window.innerHeight > window.innerWidth) {
+                Swal('Rotate You Device');
+                document.getElementById("overlay").style.display = "block";
+            } else {
+                document.getElementById("overlay").style.display = "none";
+            }
+        }
+        </script>
     </body>
 </html>
