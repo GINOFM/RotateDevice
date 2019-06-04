@@ -16,7 +16,7 @@
     <!-- Set the background colour of the document -->
     <style>
         body {
-            background: #000000;
+            background: #2EC4B6;
             color: #cccccc;
             margin: 0px;
             padding: 0px;
@@ -73,7 +73,7 @@
         }
 
         @media only screen and (orientation:portrait) {
-            .container {
+            .container,.phone,.turn {
                 display: block;
             }
 
@@ -83,7 +83,7 @@
         }
 
         @media only screen and (orientation:landscape) {
-            .container {
+            .container,.phone,.turn {
                 display: none;
             }
 
@@ -97,19 +97,23 @@
             top: 50%;
             left: 50%;
             transform: translateX(-50%) translateY(-50%);
+            text-align: center;
         }
 
-        #turn {
-            color: white;
-            font-size: 1em;
+        .turn {
+            color: black;
+            font-size: 2em;
             margin-top: 40px;
             /* display: none; */
         }
 
         .phone {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
             height: 50px;
             width: 100px;
-            border: 3px solid white;
+            border: 3px solid black;
             border-radius: 10px;
             animation: rotate 1.5s ease-in-out infinite alternate;
             /* display: none; */
@@ -135,8 +139,9 @@
     <div class="container">
         <div class="phone">
         </div>
-        <div id="turn">
+        <div class="turn">
             Please rotate your device!
+
         </div>
 
     </div>
