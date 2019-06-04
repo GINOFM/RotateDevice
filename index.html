@@ -8,13 +8,13 @@
         <meta name ="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta charset="utf-8"/>
-        <script src="html5game/sweetalert2.min.js"></script>
-        <link rel="stylesheet" href="html5game/sweetalert2.min.css">
+
         <!-- Set the title bar of the page -->
-        <title>Created with GameMaker: Studio</title>
+        <title>Name 5</title>
 
         <!-- Set the background colour of the document -->
         <style>
+        
             body {
               background: #000000;
               color:#cccccc;
@@ -68,14 +68,24 @@
                width: 100%;
                height: 100%;
             }
+
+            @media only screen and (orientation:portrait){
+            #turn{ display:block; }
+            #gm4html5_div_id{ display:none; }
+            }
+            @media only screen and (orientation:landscape){
+            #turn{ display:none; }
+            #gm4html5_div_id{ display:block; }
+            }
         </style>
     </head>
 
     <body>
-    <div id="overlay">
-        <div id="text">Please Rotate you Device</div>
-    </div>
+            <div id="turn">
+                Please rotate your device!
+            </div>
         <div class="gm4html5_div_class" id="gm4html5_div_id">
+        <img src="html5game/splash.png" id="GM4HTML5_loadingscreen" alt="GameMaker:HTML5 loading screen" style="display:none;"/>
             <!-- Create the canvas element the game draws to -->
             <canvas id="canvas" width="1280" height="720">
                <p>Your browser doesn't support HTML5 canvas.</p>
@@ -83,17 +93,7 @@
         </div>
 
         <!-- Run the game code -->
-        <script type="text/javascript" src="html5game/RotateDevice.js?XMSYB=1287656077"></script>
+        <script type="text/javascript" src="html5game/Name 5.js?ZETYB=743014179"></script>
         <script>window.onload = GameMaker_Init;</script>
-        <script>
-        function applyOrientation() {
-            if (window.innerHeight > window.innerWidth) {
-                Swal('Rotate You Device');
-                document.getElementById("overlay").style.display = "block";
-            } else {
-                document.getElementById("overlay").style.display = "none";
-            }
-        }
-        </script>
     </body>
 </html>
